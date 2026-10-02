@@ -1,0 +1,21 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# AWS credentials / keys
+.aws/
+*.pem
+*.key
+
+#SSH keys
+id_rsa
+id_rsa.pub
+
+# OS files
+.DS_Store
+Thumbs.db
