@@ -8,7 +8,7 @@ resource "aws_instance" "app" {
   ]
 
   iam_instance_profile = aws_iam_instance_profile.ec2.name
-  key_name             = aws_key_pair.aws_vm.key_name
+  key_name             = var.public_key != "" ? aws_key_pair.aws_vm[0].key_name : null
   user_data            = <<-EOF
                               #!/bin/bash
                               apt update -y
